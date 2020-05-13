@@ -99,6 +99,7 @@ function(correct_platform_strings)
         sabre
         wandq
         kzm
+        rpi2
         rpi3
         exynos5250
         exynos5410
@@ -120,6 +121,8 @@ function(correct_platform_strings)
         set(KernelARMPlatform wandq CACHE STRING "" FORCE)
     elseif("${PLATFORM}" STREQUAL "kzm")
         set(KernelPlatform imx31 CACHE STRING "" FORCE)
+    elseif("${PLATFORM}" STREQUAL "rpi2")
+        set(KernelPlatform bcm2836 CACHE STRING "" FORCE)
     elseif("${PLATFORM}" STREQUAL "rpi3")
         set(KernelPlatform bcm2837 CACHE STRING "" FORCE)
     elseif("${PLATFORM}" STREQUAL "exynos5250")
